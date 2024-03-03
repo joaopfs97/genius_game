@@ -79,9 +79,9 @@ void loop() {
       break;
     case JOGO_FINALIZADO_FALHA:
       Serial.println("Jogo finalizado com falha");
-      piscaLedFalha();
-      piscaLedFalha();
-      piscaLedFalha();
+      piscaTodasAsLuzes();
+      piscaTodasAsLuzes();
+      piscaTodasAsLuzes();
       for (;;)
         ;
       break;
@@ -165,10 +165,6 @@ void piscaLedSucesso() {
   for (int i = 0; i < TAMANHO_RODADA; i++) {
     piscaLed(listaLuzes[i]);
   }
-  piscaTodasAsLuzes();
-}
-
-void piscaLedFalha() {
   piscaTodasAsLuzes();
 }
 
